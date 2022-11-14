@@ -33,25 +33,20 @@ const Navbar = () => {
     <nav className='bg-eerieBlack py-1 text-white'>
       <div className='layout flex items-center justify-between'>
         {/* DESKTOP NAVBAR */}
-        <Link href='/'>
-          <Image
-            className='hover:cursor-pointer'
-            width={164}
-            height={70}
-            src='/images/anilog.png'
-            alt='anilog logo'
-          />
-        </Link>
+        <Image
+          width={164}
+          height={70}
+          src='/images/anilog.png'
+          alt='anilog logo'
+        />
 
         {/* navbar links*/}
         <ul className='hidden space-x-4 font-bold md:flex'>
           {links.map((link) => {
             return (
-              <Link key={link.id} href={link.address}>
-                <li className='hover:cursor-pointer hover:text-mediumSlateBlue'>
-                  {link.name}
-                </li>
-              </Link>
+              <li key={link.id} className='hover:text-mediumSlateBlue'>
+                <Link href={link.address}>{link.name}</Link>
+              </li>
             );
           })}
         </ul>
@@ -74,14 +69,12 @@ const Navbar = () => {
         >
           {/* mobile header */}
           <div className='layout flex items-center justify-between py-1'>
-            <Link href='/'>
-              <Image
-                width={164}
-                height={70}
-                src='/images/anilog.png'
-                alt='anilog logo'
-              />
-            </Link>
+            <Image
+              width={164}
+              height={70}
+              src='/images/anilog.png'
+              alt='anilog logo'
+            />
 
             <button
               type='button'
@@ -96,9 +89,9 @@ const Navbar = () => {
           <ul className='flex h-screen flex-col items-center justify-center space-y-10 text-center text-3xl font-bold'>
             {links.map((link) => {
               return (
-                <Link key={link.id} href={link.address}>
-                  <li>{link.name}</li>
-                </Link>
+                <li key={link.id}>
+                  <Link href={link.address}>{link.name}</Link>
+                </li>
               );
             })}
           </ul>
