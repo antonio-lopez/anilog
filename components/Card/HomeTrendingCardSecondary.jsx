@@ -1,19 +1,18 @@
 import Image from 'next/image';
 import Rating from '../View/Rating';
 
-const HomeSeasonCardPrimary = ({
+const HomeTrendingCardSecondary = ({
   image,
   alt,
   title,
   studio,
   percentage,
-  description,
 }) => {
   return (
-    <div className='layout grid grid-cols-1 items-center gap-4 text-white lg:grid-cols-2'>
-      <div className='relative h-36 lg:h-full'>
+    <div className='grid max-w-[37rem] grid-cols-1 rounded-xl bg-eerieBlack text-white lg:grid-cols-2'>
+      <div className='relative h-28 w-full'>
         <Image
-          className=' rounded-xl'
+          className='rounded-t-xl lg:rounded-l-xl lg:rounded-tr-none'
           src={image}
           alt={alt}
           fill
@@ -22,14 +21,13 @@ const HomeSeasonCardPrimary = ({
           }}
         />
       </div>
-      <div className='flex flex-col space-y-1'>
-        <h1 className='text-xl font-bold lg:text-3xl'>{title}</h1>
+      <div className='flex flex-col space-y-1 p-2'>
+        <h1 className='text-sm font-bold lg:text-lg'>{title}</h1>
         <span className='text-sm text-white/60'>{studio}</span>
         <Rating percentage={percentage} />
-        <p className='text-sm md:text-base'>{description}</p>
       </div>
     </div>
   );
 };
 
-export default HomeSeasonCardPrimary;
+export default HomeTrendingCardSecondary;
