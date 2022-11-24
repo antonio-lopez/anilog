@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Rating from '../View/Rating';
+import Rating from '../../View/Rating';
 
 const HomeTopCard = ({ image, alt, title, percentage }) => {
   return (
