@@ -1,6 +1,6 @@
 const AnimeSectionTitle = ({ title }) => {
   return (
-    <div className='text-white'>
+    <div className='py-5 text-white'>
       {/* title text */}
       <div className='py-2 md:flex md:items-center md:justify-between'>
         <h1 className='text-xl font-bold'>{title}</h1>
