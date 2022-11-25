@@ -9,4 +9,4 @@ export default {
   },
 };
 
-export const Primary = () => <Layout />;
+export const Primary = (args) => <Layout {...args} />;

@@ -33,7 +33,7 @@ const TrendingSection = () => {
           percentage={trendingPrimaryData.percentage}
           description={trendingPrimaryData.description}
         />
-        <div className='grid grid-cols-1 gap-4'>
+        <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-1'>
           <HomeTrendingCardSecondary
             image={trendingSecondaryData.image}
             alt={trendingSecondaryData.alt}

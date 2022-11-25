@@ -3,7 +3,7 @@ import { FaGlobeAmericas } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className='bg-eerieBlack text-white'>
+    <footer className='mt-10 bg-eerieBlack text-white'>
       <div className='flex flex-col items-center py-7'>
         {/* social links */}
         <div className='flex items-center justify-center space-x-4'>
