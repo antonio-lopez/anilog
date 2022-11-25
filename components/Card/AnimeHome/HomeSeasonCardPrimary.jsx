@@ -10,7 +10,7 @@ const HomeSeasonCardPrimary = ({
   description,
 }) => {
   return (
-    <div className='layout grid grid-cols-1 items-center gap-4 text-white lg:grid-cols-2'>
+    <div className='grid grid-cols-1 items-center gap-4 text-white lg:grid-cols-2'>
       <div className='relative h-36 lg:h-full'>
         <Image
           className=' rounded-xl'

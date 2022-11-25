@@ -4,6 +4,9 @@ import HomeTrendingSection from './HomeTrendingSection';
 export default {
   title: 'Complete/AnimeHome/HomeTrendingSection',
   component: HomeTrendingSection,
+  parameters: {
+    layout: 'fullscreen',
+  },
 };
 
 export const Page = (args) => <HomeTrendingSection {...args} />;

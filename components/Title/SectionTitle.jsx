@@ -3,7 +3,7 @@ import { FaArrowRight } from 'react-icons/fa';
 
 const SectionTitle = ({ title }) => {
   return (
-    <div className='text-white'>
+    <div className='py-5 text-white'>
       {/* title text */}
       <div className='py-3 md:flex md:items-center md:justify-between'>
         <h1 className='text-xl font-bold md:text-2xl'>{title}</h1>
