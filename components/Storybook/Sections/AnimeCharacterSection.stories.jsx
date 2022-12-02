@@ -1,20 +1,22 @@
 /* eslint-disable import/no-anonymous-default-export */
-import AnimeCharacterSection from './AnimeCharacterSection';
+import { Primary as Title } from '../../Title/AnimeSectionTitle.stories';
+import { Primary as AnimeCharacter } from '../../Card/AnimeDetails/AnimeCharacter.stories';
 
 export default {
   title: 'Complete/AnimeDetails/AnimeCharacterSection',
-  component: AnimeCharacterSection,
-  parameters: {
-    layout: 'fullscreen',
-  },
+  component: Page,
 };
 
-const Template = (args) => <AnimeCharacterSection {...args} />;
-
-export const Primary = Template.bind({});
-Primary.args = {
-  image: '/assets/kaguya.png',
-  alt: 'character profile',
-  fullName: 'Kaguya Shinomiya',
-  role: 'MAIN',
-};
+export const Page = () => (
+  <section>
+    <Title title='Characters' />
+    <div className='grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3'>
+      <AnimeCharacter {...AnimeCharacter.args} />
+      <AnimeCharacter {...AnimeCharacter.args} />
+      <AnimeCharacter {...AnimeCharacter.args} />
+      <AnimeCharacter {...AnimeCharacter.args} />
+      <AnimeCharacter {...AnimeCharacter.args} />
+      <AnimeCharacter {...AnimeCharacter.args} />
+    </div>
+  </section>
+);

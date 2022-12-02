@@ -5,7 +5,7 @@ const AnimeRelations = ({ image, alt, title, relationshipType, type }) => {
     <div className='grid grid-cols-[113px,_auto] gap-3 rounded-xl bg-eerieBlack text-white'>
       <div className='relative h-40 self-center rounded-xl'>
         <Image
-          className='rounded-xl '
+          className='rounded-l-xl '
           src={image}
           alt={alt}
           fill
