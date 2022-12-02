@@ -1,10 +1,10 @@
 /* eslint-disable import/no-anonymous-default-export */
 import { Primary as Layout } from '../Layout/Layout.stories';
 import Hero from '../Hero';
-import { Primary as SeasonSection } from './Sections/HomeSeasonSection.stories';
-import { Primary as TopSection } from './Sections/HomeTopSection.stories';
-import { Primary as MovieSection } from './Sections/HomeMovieSection.stories';
-import TrendingSection from './Sections/HomeTrendingSection';
+import { Page as SeasonSection } from './Sections/HomeSeasonSection.stories';
+import { Page as TopSection } from './Sections/HomeTopSection.stories';
+import { Page as MovieSection } from './Sections/HomeMovieSection.stories';
+import { Page as HomeTrendingSection } from './Sections/HomeTrendingSection.stories';
 
 export default {
   title: 'Complete/HomePage',
@@ -17,9 +17,11 @@ export default {
 export const Page = () => (
   <Layout {...Layout.args}>
     <Hero />
-    <SeasonSection {...SeasonSection.args} />
-    <TopSection {...TopSection.args} />
-    <TrendingSection />
-    <MovieSection {...MovieSection.args} />
+    <div className='layout'>
+      <SeasonSection {...SeasonSection.args} />
+      <TopSection {...TopSection.args} />
+      <HomeTrendingSection {...HomeTrendingSection.args} />
+      <MovieSection {...MovieSection.args} />
+    </div>
   </Layout>
 );

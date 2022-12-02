@@ -2,7 +2,7 @@
 import HomeMovieCard from './HomeMovieCard';
 
 export default {
-  title: 'Card/HomeMovieCard',
+  title: 'Card/Home/HomeMovieCard',
   component: HomeMovieCard,
 };
 

@@ -2,7 +2,7 @@
 import HomeSeasonCardPrimary from './HomeSeasonCardPrimary';
 
 export default {
-  title: 'Card/HomeSeasonCardPrimary',
+  title: 'Card/Home/HomeSeasonCardPrimary',
   component: HomeSeasonCardPrimary,
 };
 

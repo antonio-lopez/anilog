@@ -2,7 +2,7 @@
 import HomeTrendingCardPrimary from './HomeTrendingCardPrimary';
 
 export default {
-  title: 'Card/HomeTrendingCardPrimary',
+  title: 'Card/Home/HomeTrendingCardPrimary',
   component: HomeTrendingCardPrimary,
 };
 

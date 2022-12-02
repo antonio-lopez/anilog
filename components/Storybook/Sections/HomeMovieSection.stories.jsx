@@ -1,20 +1,19 @@
 /* eslint-disable import/no-anonymous-default-export */
-import HomeMovieSection from './HomeMovieSection';
+import { Primary as Title } from '../../Title/AnimeSectionTitle.stories';
+import { Primary as HomeMovie } from '../../Card/AnimeHome/HomeMovieCard.stories';
 
 export default {
   title: 'Complete/AnimeHome/HomeMovieSection',
-  component: HomeMovieSection,
-  parameters: {
-    layout: 'fullscreen',
-  },
+  component: Page,
 };
 
-const Template = (args) => <HomeMovieSection {...args} />;
-
-export const Primary = Template.bind({});
-Primary.args = {
-  image: '/assets/offline-cover.jpg',
-  alt: 'anime cover',
-  title: 'Kaguya-sama: Love is War?',
-  studio: 'A-1 Pictures',
-};
+export const Page = () => (
+  <section>
+    <Title title='Movies' />
+    <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3'>
+      <HomeMovie {...HomeMovie.args} />
+      <HomeMovie {...HomeMovie.args} />
+      <HomeMovie {...HomeMovie.args} />
+    </div>
+  </section>
+);

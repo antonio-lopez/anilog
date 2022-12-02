@@ -2,7 +2,7 @@
 import HomeTopCard from './HomeTopCard';
 
 export default {
-  title: 'Card/HomeTopCard',
+  title: 'Card/Home/HomeTopCard',
   component: HomeTopCard,
 };
 
