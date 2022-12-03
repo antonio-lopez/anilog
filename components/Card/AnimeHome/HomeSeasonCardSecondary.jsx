@@ -6,7 +6,7 @@ const HomeSeasonCardSecondary = ({
   alt,
   title,
   studio,
-  percentage,
+  averageScore,
   description,
 }) => {
   return (
@@ -25,7 +25,7 @@ const HomeSeasonCardSecondary = ({
       <div className='overflow-hidden py-1 px-2'>
         <h1>{title}</h1>
         <span className='text-xs text-white/60'>{studio}</span>
-        <Rating percentage={percentage} />
+        <Rating averageScore={averageScore} />
         <p className='text-xs lg:text-base'>{description}</p>
       </div>
     </div>

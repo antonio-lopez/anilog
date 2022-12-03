@@ -6,7 +6,7 @@ const HomeSeasonCardPrimary = ({
   alt,
   title,
   studio,
-  percentage,
+  averageScore,
   description,
 }) => {
   return (
@@ -25,7 +25,7 @@ const HomeSeasonCardPrimary = ({
       <div className='flex flex-col space-y-1'>
         <h1 className='text-xl font-bold lg:text-3xl'>{title}</h1>
         <span className='text-sm text-white/60'>{studio}</span>
-        <Rating percentage={percentage} />
+        <Rating averageScore={averageScore} />
         <p className='text-sm md:text-base'>{description}</p>
       </div>
     </div>

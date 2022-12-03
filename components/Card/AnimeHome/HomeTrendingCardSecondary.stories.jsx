@@ -14,5 +14,5 @@ Primary.args = {
   alt: 'anime cover',
   title: 'Kaguya-sama: Love is War?',
   studio: 'A-1 Pictures',
-  percentage: '90',
+  averageScore: 90,
 };

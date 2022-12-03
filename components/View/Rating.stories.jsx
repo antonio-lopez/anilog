@@ -9,4 +9,4 @@ export default {
 const Template = (args) => <Rating {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = { percentage: '90' };
+Primary.args = { averageScore: 90 };

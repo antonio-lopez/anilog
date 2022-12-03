@@ -13,5 +13,5 @@ Primary.args = {
   image: '/assets/offline-main.png',
   alt: 'anime cover',
   title: 'Kaguya-sama: Love is War?',
-  percentage: '90',
+  averageScore: 90,
 };

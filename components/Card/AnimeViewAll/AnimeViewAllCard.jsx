@@ -43,7 +43,7 @@ const AnimeViewAllCard = ({
               {formatString(season)} {seasonYear}
             </span>
           </div>
-          <Rating rating={averageScore} />
+          <Rating averageScore={averageScore} />
         </div>
         <GenrePill genres={genres} />
       </div>

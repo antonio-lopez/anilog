@@ -6,7 +6,7 @@ const HomeTrendingCardSecondary = ({
   alt,
   title,
   studio,
-  percentage,
+  averageScore,
 }) => {
   return (
     <div className='grid max-w-[37rem] grid-cols-1 rounded-xl bg-eerieBlack text-white lg:grid-cols-2'>
@@ -24,7 +24,7 @@ const HomeTrendingCardSecondary = ({
       <div className='flex flex-col space-y-1 p-2'>
         <h1 className='text-sm font-bold lg:text-lg'>{title}</h1>
         <span className='text-sm text-white/60'>{studio}</span>
-        <Rating percentage={percentage} />
+        <Rating averageScore={averageScore} />
       </div>
     </div>
   );
