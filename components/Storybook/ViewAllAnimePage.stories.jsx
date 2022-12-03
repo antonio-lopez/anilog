@@ -15,7 +15,11 @@ export const Page = () => (
   <Layout {...Layout.args}>
     <div className='layout'>
       <AllSectionTitle {...AllSectionTitle.args} />
-      <div className='grid grid-cols-1 md:grid-cols-2'>
+      <div className='grid grid-cols-1 gap-3 md:grid-cols-2'>
+        <AnimeViewAllCard {...AnimeViewAllCard.args} />
+        <AnimeViewAllCard {...AnimeViewAllCard.args} />
+        <AnimeViewAllCard {...AnimeViewAllCard.args} />
+        <AnimeViewAllCard {...AnimeViewAllCard.args} />
         <AnimeViewAllCard {...AnimeViewAllCard.args} />
         <AnimeViewAllCard {...AnimeViewAllCard.args} />
       </div>
