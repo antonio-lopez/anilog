@@ -11,7 +11,7 @@ const SeasonalAnime = ({ seasonalAnimeData }) => {
       <SectionTitle title='Current Season' />
       <HomeSeasonCardPrimary
         image={primaryAnime.bannerImage}
-        alt='anime banner'
+        alt={primaryAnime.title.english}
         title={primaryAnime.title.english}
         studio={primaryAnime.studios.nodes[0].name}
         averageScore={primaryAnime.averageScore}
@@ -23,7 +23,7 @@ const SeasonalAnime = ({ seasonalAnimeData }) => {
           <HomeSeasonCardSecondary
             key={anime.id}
             image={anime.coverImage.extraLarge}
-            alt='anime cover'
+            alt={anime.title.english}
             title={anime.title.english}
             studio={anime.studios.nodes[0].name}
             averageScore={anime.averageScore}

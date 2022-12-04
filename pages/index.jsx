@@ -3,13 +3,24 @@ import client from '../apollo-client';
 import getSeason from '../utils/findSeason';
 import Hero from '../components/Hero';
 import SeasonalAnime from '../components/Home/SeasonalAnime';
+import TopAnime from '../components/Home/TopAnime';
+import MovieAnime from '../components/Home/MovieAnime';
+import TrendingAnime from '../components/Home/TrendingAnime';
 
-export default function Home({ seasonalAnimeData }) {
+export default function Home({
+  seasonalAnimeData,
+  topFiveAnimeData,
+  animeMoviesData,
+  trendingAnimeData,
+}) {
   return (
     <div>
       <Hero />
       <div className='layout'>
         <SeasonalAnime seasonalAnimeData={seasonalAnimeData} />
+        <TopAnime topFiveAnimeData={topFiveAnimeData} />
+        <TrendingAnime trendingAnimeData={trendingAnimeData} />
+        <MovieAnime animeMoviesData={animeMoviesData} />
       </div>
     </div>
   );
@@ -50,6 +61,51 @@ export async function getServerSideProps() {
             }
           }
         }
+        topFiveAnime: Page(perPage: 5) {
+          media(format: TV, averageScore_greater: 89, sort: SCORE_DESC) {
+            id
+            averageScore
+            title {
+              english
+            }
+            coverImage {
+              extraLarge
+            }
+          }
+        }
+        trendingAnime: Page(perPage: 5) {
+          media(format: TV, sort: TRENDING_DESC) {
+            id
+            averageScore
+            title {
+              english
+            }
+            coverImage {
+              extraLarge
+            }
+            studios(isMain:true){
+              nodes{
+                name
+              }
+            }
+            description(asHtml: false)
+          }
+        }
+        animeMovies: Page(perPage: 3) {
+          media(format: MOVIE, seasonYear: ${currentYear}, averageScore_greater: 70, sort: SCORE_DESC) {
+            id
+            averageScore
+            studios(isMain:true){
+              nodes{
+                name
+              }
+            }
+            title {
+              english
+            }
+            bannerImage
+          }
+        }
       }
     `,
   });
@@ -57,6 +113,9 @@ export async function getServerSideProps() {
   return {
     props: {
       seasonalAnimeData: data.seasonalAnime.media,
+      topFiveAnimeData: data.topFiveAnime.media,
+      animeMoviesData: data.animeMovies.media,
+      trendingAnimeData: data.trendingAnime.media,
     },
   };
 }
