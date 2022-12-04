@@ -11,7 +11,7 @@ const Hero = () => {
         </p>
       </div>
       <Image
-        className='max-w-full opacity-30'
+        className='mx-auto max-w-full opacity-30'
         src='/assets/cover.jpg'
         alt='hero cover'
         width={1440}

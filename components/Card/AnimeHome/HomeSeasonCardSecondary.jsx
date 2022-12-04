@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Rating from '../../View/Rating';
+import shorten from '../../../utils/shortenString';
 
 const HomeSeasonCardSecondary = ({
   image,
@@ -10,7 +11,7 @@ const HomeSeasonCardSecondary = ({
   description,
 }) => {
   return (
-    <div className='grid h-44 max-w-[37rem] grid-cols-[110px,_auto] rounded-xl bg-eerieBlack text-white lg:h-52 lg:grid-cols-[160px,_auto]'>
+    <div className='grid h-44 max-w-[37rem] grid-cols-[110px,_auto] rounded-xl bg-eerieBlack text-white shadow-md shadow-black lg:h-52 lg:grid-cols-[160px,_auto]'>
       <div className='relative'>
         <Image
           className='rounded-l-xl object-left'
@@ -26,7 +27,8 @@ const HomeSeasonCardSecondary = ({
         <h1>{title}</h1>
         <span className='text-xs text-white/60'>{studio}</span>
         <Rating averageScore={averageScore} />
-        <p className='text-xs lg:text-base'>{description}</p>
+        <p className='hidden lg:block'>{shorten(description, 250)}...</p>
+        <p className='text-xs lg:hidden'>{shorten(description, 170)}...</p>
       </div>
     </div>
   );
