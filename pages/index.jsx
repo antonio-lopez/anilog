@@ -1,10 +1,10 @@
 import { gql } from '@apollo/client';
 import client from '../apollo-client';
+import getSeason from '../utils/findSeason';
 import Hero from '../components/Hero';
 import SeasonalAnime from '../components/Home/SeasonalAnime';
 
 export default function Home({ seasonalAnimeData }) {
-  // console.log(seasonalAnimeData);
   return (
     <div>
       <Hero />
@@ -16,6 +16,11 @@ export default function Home({ seasonalAnimeData }) {
 }
 
 export async function getServerSideProps() {
+  const currentSeason = ['WINTER', 'SPRING', 'SUMMER', 'FALL'][
+    getSeason(new Date())
+  ];
+  const currentYear = new Date().getFullYear();
+
   const { data } = await client.query({
     //  TOP 9 ANIME IN THE SEASON
     query: gql`
@@ -23,8 +28,8 @@ export async function getServerSideProps() {
         seasonalAnime: Page(perPage: 9) {
           media(
             format: TV
-            season: SPRING
-            seasonYear: 2022
+            season: ${currentSeason}
+            seasonYear: ${currentYear}
             averageScore_greater: 76
             sort: SCORE_DESC
           ) {
