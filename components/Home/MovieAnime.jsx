@@ -9,6 +9,7 @@ const MovieAnime = ({ animeMoviesData }) => {
         {animeMoviesData.map((movie) => (
           <HomeMovieCard
             key={movie.id}
+            id={movie.id}
             image={movie.bannerImage}
             alt={movie.title.english}
             title={movie.title.english}

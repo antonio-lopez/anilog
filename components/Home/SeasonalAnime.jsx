@@ -10,6 +10,8 @@ const SeasonalAnime = ({ seasonalAnimeData }) => {
     <section>
       <SectionTitle title='Current Season' />
       <HomeSeasonCardPrimary
+        key={primaryAnime.id}
+        id={primaryAnime.id}
         image={primaryAnime.bannerImage}
         alt={primaryAnime.title.english}
         title={primaryAnime.title.english}
@@ -22,6 +24,7 @@ const SeasonalAnime = ({ seasonalAnimeData }) => {
         {secondaryAnime.map((anime) => (
           <HomeSeasonCardSecondary
             key={anime.id}
+            id={anime.id}
             image={anime.coverImage.extraLarge}
             alt={anime.title.english}
             title={anime.title.english}

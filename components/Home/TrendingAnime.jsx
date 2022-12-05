@@ -13,6 +13,7 @@ const TrendingAnime = ({ trendingAnimeData }) => {
       <div className='grid grid-cols-1 gap-4 rounded-xl bg-eerieBlack p-4 shadow-md shadow-black lg:grid-cols-2'>
         <HomeTrendingCardPrimary
           key={primaryAnime.id}
+          id={primaryAnime.id}
           image={primaryAnime.coverImage.extraLarge}
           alt={primaryAnime.title.english}
           title={primaryAnime.title.english}
@@ -24,6 +25,7 @@ const TrendingAnime = ({ trendingAnimeData }) => {
           {secondaryAnime.map((anime) => (
             <HomeTrendingCardSecondary
               key={anime.id}
+              id={anime.id}
               image={anime.coverImage.extraLarge}
               alt={anime.title.english}
               title={anime.title.english}

@@ -9,6 +9,7 @@ const TopAnime = ({ topFiveAnimeData }) => {
         {topFiveAnimeData.map((anime) => (
           <HomeTopCard
             key={anime.id}
+            id={anime.id}
             image={anime.coverImage.extraLarge}
             alt={anime.title.english}
             title={anime.title.english}

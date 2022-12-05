@@ -1,10 +1,15 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
-const HomeMovieCard = ({ image, alt, title, studio }) => {
+const HomeMovieCard = ({ image, alt, title, studio, id }) => {
   return (
     <div className='relative'>
       <div className='absolute z-10 flex h-full flex-col justify-end p-3 text-white'>
-        <h1 className='text-lg font-bold lg:text-2xl'>{title}</h1>
+        <Link href={`/anime/${id}`}>
+          <h1 className='text-lg font-bold hover:text-mediumSlateBlue lg:text-2xl'>
+            {title}
+          </h1>
+        </Link>
         <span className='text-sm text-white'>{studio}</span>
       </div>
       <div className='relative h-28 lg:h-64'>
