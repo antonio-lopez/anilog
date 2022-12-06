@@ -16,6 +16,7 @@ const Hero = () => {
         alt='hero cover'
         width={1440}
         height={384}
+        priority
       />
     </section>
   );

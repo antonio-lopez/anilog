@@ -24,6 +24,7 @@ const HomeSeasonCardPrimary = ({
             style={{
               objectFit: 'cover',
             }}
+            priority
           />
         </Link>
       </div>
