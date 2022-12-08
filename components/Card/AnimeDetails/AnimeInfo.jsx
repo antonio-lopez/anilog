@@ -12,7 +12,7 @@ const AnimeInfo = ({
   averageScore,
   genres,
 }) => {
-  const studio = studios[0];
+  const studio = studios[0].name;
   const producers = studios.slice(1);
 
   return (
@@ -50,15 +50,15 @@ const AnimeInfo = ({
         </div>
         <div>
           <span>Producers</span>
-          {producers.map((producer, index) => {
-            return <div key={index}>{producer}</div>;
-          })}
+          {producers.map((producer) => (
+            <div key={producer.id}>{producer.name}</div>
+          ))}
         </div>
         <div>
           <span>Genres</span>
-          {genres.map((genre, index) => {
-            return <div key={index}>{genre}</div>;
-          })}
+          {genres.map((genre, index) => (
+            <div key={index}>{genre}</div>
+          ))}
         </div>
         <div>
           <span>Romaji</span>

@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import markdownToTxt from 'markdown-to-txt';
 
 const AnimeSummary = ({ image, alt, title, description }) => {
   return (
@@ -16,7 +17,7 @@ const AnimeSummary = ({ image, alt, title, description }) => {
         </div>
         <div className='flex flex-col space-y-1 pt-5 sm:pt-0'>
           <h1 className='text-2xl font-bold'>{title}</h1>
-          <p className='text-sm lg:text-base'>{description}</p>
+          <p className='text-sm lg:text-base'>{markdownToTxt(description)}</p>
         </div>
       </div>
     </div>
