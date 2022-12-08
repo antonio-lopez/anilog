@@ -6,7 +6,7 @@ const RelationsAnime = ({ relations }) => {
   const relationsArr = getRelations(relations.edges);
 
   return (
-    <section>
+    <section className='-mt-5'>
       <AnimeSectionTitle title='Relations' />
       <div className='grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3'>
         {relationsArr.map((relation) => (

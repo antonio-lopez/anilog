@@ -5,7 +5,7 @@ const AnimeBanner = ({ image, alt }) => {
     <section className='relative h-28 w-full'>
       <Image
         className='mx-auto max-w-screen-2xl opacity-30'
-        src={image}
+        src={image ? image : ''}
         alt={alt}
         fill
         style={{

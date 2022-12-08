@@ -3,7 +3,7 @@ import markdownToTxt from 'markdown-to-txt';
 
 const AnimeSummary = ({ image, alt, title, description }) => {
   return (
-    <div className='w-full bg-eerieBlack py-4 text-white'>
+    <div className='w-full bg-eerieBlack py-8 text-white shadow-md shadow-black'>
       <div className='layout grid grid-cols-1 md:grid-cols-[219px,_auto]'>
         <div className='relative h-64 self-center'>
           <Image

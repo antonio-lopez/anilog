@@ -16,7 +16,7 @@ const AnimeInfo = ({
   const producers = studios.slice(1);
 
   return (
-    <section className='bg-eerieBlack p-4 text-white'>
+    <section className='rounded-xl bg-eerieBlack p-4 text-white shadow-md shadow-black'>
       <div className='flex flex-col space-y-3 [&_span]:font-bold'>
         <div>
           <span>Studio</span>
