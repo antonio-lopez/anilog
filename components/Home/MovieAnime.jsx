@@ -4,7 +4,7 @@ import HomeMovieCard from '../Card/AnimeHome/HomeMovieCard';
 const MovieAnime = ({ animeMoviesData }) => {
   return (
     <section>
-      <SectionTitle title='Movies' />
+      <SectionTitle title='Movies' link='/anime/movies' />
       <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3'>
         {animeMoviesData.map((movie) => (
           <HomeMovieCard

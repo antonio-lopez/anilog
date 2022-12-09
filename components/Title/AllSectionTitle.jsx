@@ -1,4 +1,4 @@
-const AnimeSectionTitle = ({ title }) => {
+const AllSectionTitle = ({ title }) => {
   return (
     <div className='py-5 text-white'>
       <div className='py-2 md:flex md:items-center md:justify-between'>
@@ -11,4 +11,4 @@ const AnimeSectionTitle = ({ title }) => {
   );
 };
 
-export default AnimeSectionTitle;
+export default AllSectionTitle;

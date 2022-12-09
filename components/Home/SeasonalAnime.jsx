@@ -8,7 +8,7 @@ const SeasonalAnime = ({ seasonalAnimeData }) => {
   const secondaryAnime = seasonalAnimeData.slice(1);
   return (
     <section>
-      <SectionTitle title='Current Season' />
+      <SectionTitle title='Current Season' link='/anime/seasonal' />
       <HomeSeasonCardPrimary
         key={primaryAnime.id}
         id={primaryAnime.id}
