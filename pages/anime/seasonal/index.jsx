@@ -1,13 +1,11 @@
-import { useState } from 'react';
 import { gql } from '@apollo/client';
 import client from '../../../apollo-client';
 import getSeason from '../../../utils/findSeason';
-import { AiOutlineCaretRight, AiOutlineCaretLeft } from 'react-icons/ai';
+import Pagination from '../../../components/View/Pagination';
 import AllSectionTitle from '../../../components/Title/AllSectionTitle';
 import AnimeViewAllCard from '../../../components/Card/AnimeViewAll/AnimeViewAllCard';
 import formatString from '../../../utils/formatString';
 import markdownToTxt from 'markdown-to-txt';
-import Router from 'next/router';
 
 const currentSeason = ['WINTER', 'SPRING', 'SUMMER', 'FALL'][
   getSeason(new Date())
@@ -15,20 +13,6 @@ const currentSeason = ['WINTER', 'SPRING', 'SUMMER', 'FALL'][
 const currentYear = new Date().getFullYear();
 
 const Seasonal = ({ seasonalAllData, pageData }) => {
-  const [page, setPage] = useState(1);
-
-  const nextPage = (e) => {
-    e.preventDefault();
-    setPage((prev) => prev + 1);
-    Router.push(`/anime/seasonal/?page=${page + 1}`);
-  };
-
-  const prevPage = (e) => {
-    e.preventDefault();
-    setPage((prev) => prev - 1);
-    Router.push(`/anime/seasonal/?page=${page - 1}`);
-  };
-
   return (
     <section className='layout'>
       <AllSectionTitle
@@ -53,27 +37,7 @@ const Seasonal = ({ seasonalAllData, pageData }) => {
           />
         ))}
       </div>
-      <div className='flex w-full items-center justify-center space-x-9 pt-10'>
-        <button
-          type='button'
-          className='flex items-end justify-center rounded-lg px-4 py-2 text-white ring-2 ring-white hover:ring-mediumSlateBlue focus:ring-mediumSlateBlue'
-          disabled={pageData.currentPage === 1}
-          onClick={prevPage}
-        >
-          <AiOutlineCaretLeft className='mr-1 h-6 w-6' />
-          Previous
-        </button>
-
-        <button
-          type='button'
-          className='flex items-end justify-center rounded-lg px-4 py-2 text-white ring-2 ring-white hover:ring-mediumSlateBlue focus:ring-mediumSlateBlue'
-          disabled={pageData.hasNextPage === false}
-          onClick={nextPage}
-        >
-          Next
-          <AiOutlineCaretRight className='ml-1 h-6 w-6' />
-        </button>
-      </div>
+      <Pagination pageData={pageData} category='seasonal' />
     </section>
   );
 };
