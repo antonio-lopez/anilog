@@ -9,7 +9,7 @@ const TrendingAnime = ({ trendingAnimeData }) => {
 
   return (
     <section>
-      <SectionTitle title='Trending' link='/anime/trending' />
+      <SectionTitle title='Trending' link='/anime/trending/?page=1' />
       <div className='grid grid-cols-1 gap-4 rounded-xl bg-eerieBlack p-4 shadow-md shadow-black lg:grid-cols-2'>
         <HomeTrendingCardPrimary
           key={primaryAnime.id}
