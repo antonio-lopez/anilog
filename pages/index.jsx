@@ -83,6 +83,7 @@ export async function getServerSideProps() {
             coverImage {
               extraLarge
             }
+            bannerImage
             studios(isMain:true){
               nodes{
                 name
