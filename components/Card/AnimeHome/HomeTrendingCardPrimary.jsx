@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Rating from '../../View/Rating';
 import Link from 'next/link';
+import shorten from '../../../utils/shortenString';
 
 const HomeTrendingCardPrimary = ({
   image,
@@ -34,7 +35,7 @@ const HomeTrendingCardPrimary = ({
         </Link>
         <span className='text-sm text-white/60'>{studio}</span>
         <Rating averageScore={averageScore} />
-        <p className='text-sm'>{description}</p>
+        <p className='text-sm'>{shorten(description, 550)}...</p>
       </div>
     </div>
   );
