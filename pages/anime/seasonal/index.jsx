@@ -37,7 +37,7 @@ const Seasonal = ({ seasonalAllData, pageData }) => {
           />
         ))}
       </div>
-      <Pagination pageData={pageData} category='seasonal' />
+      <Pagination pageData={pageData} type='anime' category='seasonal' />
     </section>
   );
 };

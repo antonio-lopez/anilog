@@ -29,7 +29,7 @@ const Top = ({ topAllData, pageData }) => {
           />
         ))}
       </div>
-      <Pagination pageData={pageData} category='top' />
+      <Pagination pageData={pageData} type='anime' category='top' />
     </section>
   );
 };

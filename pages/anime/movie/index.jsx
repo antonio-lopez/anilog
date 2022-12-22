@@ -28,7 +28,7 @@ const Movie = ({ movieAllData, pageData }) => {
           />
         ))}
       </div>
-      <Pagination pageData={pageData} category='movie' />
+      <Pagination pageData={pageData} type='anime' category='movie' />
     </section>
   );
 };

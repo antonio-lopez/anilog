@@ -30,7 +30,7 @@ const Trending = ({ trendAllData, pageData }) => {
           />
         ))}
       </div>
-      <Pagination pageData={pageData} category='trending' />
+      <Pagination pageData={pageData} type='anime' category='trending' />
     </section>
   );
 };
