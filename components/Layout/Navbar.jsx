@@ -10,20 +10,15 @@ const Navbar = () => {
     {
       id: 0,
       address: '/',
-      name: 'Home',
-    },
-    {
-      id: 1,
-      address: '/anime',
       name: 'Anime',
     },
     {
-      id: 2,
+      id: 1,
       address: '/manga',
       name: 'Manga',
     },
     {
-      id: 3,
+      id: 2,
       address: '/search',
       name: 'Search',
     },
