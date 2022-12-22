@@ -11,8 +11,10 @@ const MovieAnime = ({ animeMoviesData }) => {
             key={movie.id}
             id={movie.id}
             image={movie.bannerImage}
-            alt={movie.title.english}
-            title={movie.title.english}
+            alt={movie.title.english ? movie.title.english : movie.title.romaji}
+            title={
+              movie.title.english ? movie.title.english : movie.title.romaji
+            }
             studio={movie.studios.nodes[0].name}
           />
         ))}

@@ -11,8 +11,10 @@ const TopAnime = ({ topFiveAnimeData }) => {
             key={anime.id}
             id={anime.id}
             image={anime.coverImage.extraLarge}
-            alt={anime.title.english}
-            title={anime.title.english}
+            alt={anime.title.english ? anime.title.english : anime.title.romaji}
+            title={
+              anime.title.english ? anime.title.english : anime.title.romaji
+            }
             averageScore={anime.averageScore}
           />
         ))}

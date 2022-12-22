@@ -41,7 +41,7 @@ const AnimeInfo = ({
         <div>
           <span>Season</span>
           <div>
-            {stringCase(season)} {seasonYear}
+            {season ? stringCase(season) : ''} {seasonYear}
           </div>
         </div>
         <div>

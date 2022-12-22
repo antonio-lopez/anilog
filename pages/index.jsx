@@ -33,7 +33,6 @@ export async function getServerSideProps() {
   const currentYear = new Date().getFullYear();
 
   const { data } = await client.query({
-    //  TOP 9 ANIME IN THE SEASON
     query: gql`
       {
         seasonalAnime: Page(perPage: 9) {
@@ -48,6 +47,7 @@ export async function getServerSideProps() {
             averageScore
             title {
               english
+              romaji
             }
             studios(sort: NAME, isMain: true) {
               nodes {
@@ -67,6 +67,7 @@ export async function getServerSideProps() {
             averageScore
             title {
               english
+              romaji
             }
             coverImage {
               extraLarge
@@ -79,6 +80,7 @@ export async function getServerSideProps() {
             averageScore
             title {
               english
+              romaji
             }
             coverImage {
               extraLarge
@@ -103,6 +105,7 @@ export async function getServerSideProps() {
             }
             title {
               english
+              romaji
             }
             bannerImage
           }
