@@ -55,7 +55,7 @@ const AnimeViewAllCard = ({
             <span>{episodes} episodes</span>
             <span>•</span>
             <span>
-              {formatString(season)} {seasonYear}
+              {season ? formatString(season) : ''} {seasonYear}
             </span>
           </div>
           <Rating averageScore={averageScore} />
