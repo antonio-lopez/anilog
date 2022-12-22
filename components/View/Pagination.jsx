@@ -2,19 +2,19 @@ import { useState } from 'react';
 import { AiOutlineCaretRight, AiOutlineCaretLeft } from 'react-icons/ai';
 import Router from 'next/router';
 
-const Pagination = ({ pageData, category }) => {
+const Pagination = ({ pageData, category, type }) => {
   const [page, setPage] = useState(1);
 
   const nextPage = (e) => {
     e.preventDefault();
     setPage((prev) => prev + 1);
-    Router.push(`/anime/${category}/?page=${page + 1}`);
+    Router.push(`/${type}/${category}/?page=${page + 1}`);
   };
 
   const prevPage = (e) => {
     e.preventDefault();
     setPage((prev) => prev - 1);
-    Router.push(`/anime/${category}/?page=${page - 1}`);
+    Router.push(`/${type}/${category}/?page=${page - 1}`);
   };
   return (
     <div className='flex w-full items-center justify-center space-x-9 pt-10'>
