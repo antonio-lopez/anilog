@@ -1,16 +1,16 @@
-import AnimeRelations from '../Card/AnimeDetails/AnimeRelations';
-import AnimeSectionTitle from '../Title/AnimeSectionTitle';
+import MangaRelations from '../Card/MangaDetails/MangaRelations';
+import MangaSectionTitle from '../Title/MangaSectionTitle';
 import getRelations from '../../utils/findRelations';
 
-const RelationsAnime = ({ relations }) => {
+const RelationsManga = ({ relations }) => {
   const relationsArr = getRelations(relations.edges);
 
   return (
     <section className='-mt-5'>
-      <AnimeSectionTitle title='Relations' />
+      <MangaSectionTitle title='Relations' />
       <div className='grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3'>
         {relationsArr.map((relation) => (
-          <AnimeRelations
+          <MangaRelations
             key={relation.id}
             image={relation.node.coverImage.extraLarge}
             alt={
@@ -32,4 +32,4 @@ const RelationsAnime = ({ relations }) => {
   );
 };
 
-export default RelationsAnime;
+export default RelationsManga;
