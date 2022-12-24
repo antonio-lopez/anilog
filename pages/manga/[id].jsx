@@ -23,7 +23,6 @@ const Manga = ({ manga }) => {
     staff,
     characters,
   } = manga;
-  //   console.log(manga);
   return (
     <>
       <MangaBanner
@@ -78,6 +77,7 @@ export async function getServerSideProps(context) {
               id
               relationType
               node {
+                id
                 type
                 title {
                   english

@@ -86,6 +86,7 @@ export async function getServerSideProps(context) {
             edges {
               relationType
               node {
+                id
                 type
                 title {
                   english

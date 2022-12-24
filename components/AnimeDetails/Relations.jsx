@@ -11,6 +11,7 @@ const RelationsAnime = ({ relations }) => {
       <div className='grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3'>
         {relationsArr.map((relation) => (
           <AnimeRelations
+            relationId={relation.node.id}
             key={relation.id}
             image={relation.node.coverImage.extraLarge}
             alt={
