@@ -10,9 +10,8 @@ const MangaInfo = ({
   chapters,
   volume,
 }) => {
-  const creator = staff.nodes[0].name.full;
-  const otherStaff = staff.nodes.slice(1);
-  console.log(otherStaff);
+  const creator = staff.nodes[0]?.name.full;
+  const otherStaff = staff.nodes?.slice(1);
 
   return (
     <section className='rounded-xl bg-eerieBlack p-4 text-white shadow-md shadow-black'>
@@ -25,12 +24,10 @@ const MangaInfo = ({
           <span>Format</span>
           <div>{stringCase(format)}</div>
         </div>
-
         <div>
           <span>Chapters</span>
           {chapters ? <div>{chapters}</div> : <div>Unknown</div>}
         </div>
-
         <div>
           <span>Volumes</span>
           {volume ? <div>{volume}</div> : <div>Unknown</div>}

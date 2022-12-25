@@ -12,8 +12,8 @@ const AnimeInfo = ({
   averageScore,
   genres,
 }) => {
-  const studio = studios[0].name;
-  const producers = studios.slice(1);
+  const studio = studios[0]?.name;
+  const producers = studios?.slice(1);
 
   return (
     <section className='rounded-xl bg-eerieBlack p-4 text-white shadow-md shadow-black'>
