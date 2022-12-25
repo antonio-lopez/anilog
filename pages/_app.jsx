@@ -17,11 +17,11 @@ function MyApp({ Component, pageProps }) {
             "Track. Browse. Discover. Track what you watch. Browse the season's hottest anime. Discover new anime",
           images: [
             {
-              url: 'https://raw.githubusercontent.com/antonio-lopez/nextjs-drinks-ecommerce/main/public/images/og-modern-times-home.png',
+              url: 'https://raw.githubusercontent.com/antonio-lopez/anilog/main/public/images/anilog-seo.jpg',
               width: 800,
               height: 600,
               alt: 'Anilog Home Page',
-              type: 'image/png',
+              type: 'image/jpg',
             },
           ],
         }}
