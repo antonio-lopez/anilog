@@ -50,10 +50,11 @@ const Navbar = () => {
         {/* MOBILE NAVBAR*/}
         <button
           type='button'
+          aria-label='open mobile menu'
           onClick={() => setIsOpen((open) => !open)}
           className='md:hidden'
         >
-          <BiMenuAltRight className='h-12 w-12' />
+          <BiMenuAltRight aria-hidden='true' className='h-12 w-12' />
         </button>
 
         {/* mobile menu*/}
@@ -73,10 +74,11 @@ const Navbar = () => {
 
             <button
               type='button'
+              aria-label='close mobile menu'
               onClick={() => setIsOpen((open) => !open)}
               className='md:hidden'
             >
-              <AiOutlineClose className='h-10 w-10' />
+              <AiOutlineClose aria-hidden='true' className='h-10 w-10' />
             </button>
           </div>
 
@@ -85,7 +87,12 @@ const Navbar = () => {
             {links.map((link) => {
               return (
                 <li key={link.id}>
-                  <Link href={link.address}>{link.name}</Link>
+                  <Link
+                    onClick={() => setIsOpen((open) => !open)}
+                    href={link.address}
+                  >
+                    {link.name}
+                  </Link>
                 </li>
               );
             })}
