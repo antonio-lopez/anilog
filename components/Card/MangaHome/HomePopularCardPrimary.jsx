@@ -17,7 +17,7 @@ const HomePopularCardPrimary = ({
       <div className='relative h-36 lg:h-full'>
         <Link href={`/manga/${id}`}>
           <Image
-            className=' rounded-xl'
+            className='rounded-xl'
             src={image}
             alt={alt}
             fill
@@ -25,6 +25,9 @@ const HomePopularCardPrimary = ({
               objectFit: 'cover',
             }}
             priority
+            sizes='(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw'
           />
         </Link>
       </div>

@@ -13,8 +13,8 @@ const AnimeRelations = ({
   const lowerType = type.toLowerCase();
   return (
     <div className='grid grid-cols-[113px,_auto] gap-3 rounded-xl bg-eerieBlack text-white shadow-md shadow-black'>
-      <div className='relative h-40 self-center rounded-xl'>
-        <Link href={`/${lowerType}/${relationId}`}>
+      <Link href={`/${lowerType}/${relationId}`}>
+        <div className='relative h-40 self-center rounded-xl'>
           <Image
             className='rounded-l-xl object-left'
             src={image}
@@ -23,9 +23,12 @@ const AnimeRelations = ({
             style={{
               objectFit: 'contain',
             }}
+            sizes='(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw'
           />
-        </Link>
-      </div>
+        </div>
+      </Link>
       <div className='flex flex-col justify-between py-2 text-xs'>
         <div>
           <span>{stringCase(relationshipType)}</span>

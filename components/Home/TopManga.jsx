@@ -11,7 +11,7 @@ const TopManga = ({ topFiveMangaData }) => {
             key={manga.id}
             id={manga.id}
             image={manga.coverImage.extraLarge}
-            alt={manga.title.english}
+            alt={manga.title.english ? manga.title.english : manga.title.romaji}
             title={
               manga.title.english ? manga.title.english : manga.title.romaji
             }

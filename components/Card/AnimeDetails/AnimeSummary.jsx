@@ -13,6 +13,9 @@ const AnimeSummary = ({ image, alt, title, description }) => {
             style={{
               objectFit: 'contain',
             }}
+            sizes='(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw'
           />
         </div>
         <div className='flex flex-col space-y-1 pt-5 sm:pt-0'>

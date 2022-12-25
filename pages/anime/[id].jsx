@@ -28,11 +28,14 @@ const Anime = ({ anime }) => {
   } = anime;
   return (
     <>
-      <AnimeBanner image={bannerImage} alt={title.english} />
+      <AnimeBanner
+        image={bannerImage}
+        alt={title.english ? title.english : title.romaji}
+      />
       <AnimeSummary
         image={coverImage.extraLarge}
-        alt={title.english}
-        title={title.english}
+        alt={title.english ? title.english : title.romaji}
+        title={title.english ? title.english : title.romaji}
         description={description}
       />
       <div className='layout grid grid-cols-1 gap-10 py-10 lg:grid-cols-[240px,_auto]'>
@@ -90,6 +93,7 @@ export async function getServerSideProps(context) {
                 type
                 title {
                   english
+                  romaji
                 }
                 coverImage{
                   extraLarge
