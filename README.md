@@ -39,6 +39,7 @@ An anime and manga tracker using the [Anilist GraphQL API](https://github.com/An
 - [GraphQL](https://graphql.org/)
 - [Apollo Client](https://www.apollographql.com/)
 - [Anilist GraphQL API](https://github.com/AniList/ApiV2-GraphQL-Docs)
+- [Storybook](https://storybook.js.org/)
 
 🌐 [Live Demo](https://anilog.vercel.app/)
 
