@@ -46,7 +46,7 @@ An anime and manga tracker using the [Anilist GraphQL API](https://github.com/An
 
 🎨 [Figma Design](https://www.figma.com/file/wGhHnZDT59jzUZmz7RX6dG/ani-tracker?node-id=0%3A1&t=KSLPSVErdBmo5bLP-1)
 
-![screenshot](/public/images/modern-times-homepage-screenshot.png)
+![screenshot](/public/images/anilog-full-screenshot.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
