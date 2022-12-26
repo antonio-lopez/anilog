@@ -1,34 +1,99 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div id="top"></div>
+
+# Anilog
+
+> An anime and manga tracker built with NextJS and GraphQL.
+
+## Table of contents
+
+- [About The Project](#about-the-project)
+  - [Built With](#built-with)
+  - [Highlights](#highlights)
+- [Getting Started](#getting-started)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Acknowledgments](#acknowledgments)
+- [Author](#author)
+
+## About The Project
+
+An anime and manga tracker using the [Anilist GraphQL API](https://github.com/AniList/ApiV2-GraphQL-Docs) for static and dynamic queries. First time using GraphQL and the Apollo client to consume an API in NextJS. Queries are executed on the server to pre-render pages using NextJS `getServerSideProps`. Dynamic queries are executed on the client side when searching for an anime or manga.
+
+### Highlights
+
+- GraphQL API calls and interactions
+- Normalized reactive data caching using Apollo client
+- Server side rendering to pre-render pages for better SEO and page loading performance
+- NextJS images optimization to reduce load times and Largest Contentful Paint
+- Client side search functionality and rendering
+- Dynamic page routing
+- Responsive on all screens
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### Built With
+
+- [Next.js](https://nextjs.org/)
+- [React.js](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [GraphQL](https://graphql.org/)
+- [Apollo Client](https://www.apollographql.com/)
+- [Anilist GraphQL API](https://github.com/AniList/ApiV2-GraphQL-Docs)
+
+🌐 [Live Demo](https://anilog.vercel.app/)
+
+🏗️ [Storybook Design](https://anilog-storybook.vercel.app/?path=/story/complete-homepage--page)
+
+🎨 [Figma Design](https://www.figma.com/file/wGhHnZDT59jzUZmz7RX6dG/ani-tracker?node-id=0%3A1&t=KSLPSVErdBmo5bLP-1)
+
+![screenshot](/public/images/modern-times-homepage-screenshot.png)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy up and running follow these simple example steps.
 
-```bash
-npm run dev
-# or
-yarn dev
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+### Installation
+
+Clone repository
+
+```
+git clone https://github.com/antonio-lopez/anilog.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Install dependencies
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+cd anilog
+npm install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Usage
 
-## Learn More
+```
+cd anilog
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Acknowledgments
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Anilist GraphQL API
+  - [Link](https://github.com/AniList/ApiV2-GraphQL-Docs)
 
-## Deploy on Vercel
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+👤 **Antonio Lopez**
+
+- Website: [Antonio Lopez](https://www.antoniolopez.me/)
+- Github: [@antonio-lopez](https://github.com/antonio-lopez)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
