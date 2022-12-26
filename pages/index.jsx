@@ -75,7 +75,7 @@ export async function getServerSideProps() {
           }
         }
         trendingAnime: Page(perPage: 5) {
-          media(format: TV, sort: TRENDING_DESC) {
+          media(format: TV, averageScore_greater: 70, sort: TRENDING_DESC) {
             id
             averageScore
             title {
