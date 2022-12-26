@@ -15,6 +15,9 @@ module.exports = {
         mediumSeaGreen: '#2CB67D',
         gainsboro: '#D9D9D9',
       },
+      gridTemplateRows: {
+        8: 'repeat(8, minmax(0, 1fr))',
+      },
     },
   },
   plugins: [],

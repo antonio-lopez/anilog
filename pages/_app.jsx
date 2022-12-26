@@ -1,3 +1,5 @@
+import { ApolloProvider } from '@apollo/client';
+import client from '../apollo-client';
 import { NextSeo } from 'next-seo';
 import '../styles/globals.css';
 import Layout from '../components/Layout/Layout';
@@ -26,7 +28,9 @@ function MyApp({ Component, pageProps }) {
           ],
         }}
       />
-      <Component {...pageProps} />
+      <ApolloProvider client={client}>
+        <Component {...pageProps} />
+      </ApolloProvider>
     </Layout>
   );
 }
