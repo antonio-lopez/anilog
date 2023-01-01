@@ -18,12 +18,13 @@ export default function Home({
   animeMoviesData,
   trendingAnimeData,
 }) {
+  console.log(seasonalAnimeData);
   return (
     <div>
       <Hero />
       <div className='layout'>
-        <SeasonalAnime seasonalAnimeData={seasonalAnimeData} />
         <TopAnime topFiveAnimeData={topFiveAnimeData} />
+        <SeasonalAnime seasonalAnimeData={seasonalAnimeData} />
         <TrendingAnime trendingAnimeData={trendingAnimeData} />
         <MovieAnime animeMoviesData={animeMoviesData} />
       </div>
