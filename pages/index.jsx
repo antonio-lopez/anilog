@@ -17,7 +17,7 @@ export default function Home({
     <div>
       <Hero />
       <div className='layout'>
-        <SeasonalAnime seasonalAnimeData={seasonalAnimeData} />
+        {/* <SeasonalAnime seasonalAnimeData={seasonalAnimeData} /> */}
         <TopAnime topFiveAnimeData={topFiveAnimeData} />
         <TrendingAnime trendingAnimeData={trendingAnimeData} />
         <MovieAnime animeMoviesData={animeMoviesData} />
