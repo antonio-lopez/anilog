@@ -14,7 +14,7 @@ const TrendingAnime = ({ trendingAnimeData }) => {
         <HomeTrendingCardPrimary
           key={primaryAnime.id}
           id={primaryAnime.id}
-          image={primaryAnime.bannerImage}
+          image={primaryAnime?.bannerImage}
           alt={
             primaryAnime.title.english
               ? primaryAnime.title.english

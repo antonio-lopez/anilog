@@ -12,9 +12,17 @@ const SeasonalAnime = ({ seasonalAnimeData }) => {
       <HomeSeasonCardPrimary
         key={primaryAnime.id}
         id={primaryAnime.id}
-        image={primaryAnime.bannerImage}
-        alt={primaryAnime.title.english}
-        title={primaryAnime.title.english}
+        image={primaryAnime?.bannerImage}
+        alt={
+          primaryAnime.title.english
+            ? primaryAnime.title.english
+            : primaryAnime.title.romaji
+        }
+        title={
+          primaryAnime.title.english
+            ? primaryAnime.title.english
+            : primaryAnime.title.romaji
+        }
         studio={primaryAnime.studios.nodes[0].name}
         averageScore={primaryAnime.averageScore}
         description={markdownToTxt(primaryAnime.description)}
@@ -25,9 +33,11 @@ const SeasonalAnime = ({ seasonalAnimeData }) => {
           <HomeSeasonCardSecondary
             key={anime.id}
             id={anime.id}
-            image={anime.coverImage.extraLarge}
-            alt={anime.title.english}
-            title={anime.title.english}
+            image={anime.coverImage?.extraLarge}
+            alt={anime.title.english ? anime.title.english : anime.title.romaji}
+            title={
+              anime.title.english ? anime.title.english : anime.title.romaji
+            }
             studio={anime.studios.nodes[0].name}
             averageScore={anime.averageScore}
             description={markdownToTxt(anime.description)}
