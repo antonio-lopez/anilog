@@ -10,8 +10,8 @@ const SeasonalAnime = ({ seasonalAnimeData }) => {
     <section>
       <SectionTitle title='Current Season' link='/anime/seasonal/?page=1' />
       <HomeSeasonCardPrimary
-        key={primaryAnime.id}
-        id={primaryAnime.id}
+        key={primaryAnime?.id}
+        id={primaryAnime?.id}
         image={primaryAnime?.bannerImage}
         alt={
           primaryAnime.title.english
