@@ -95,7 +95,7 @@ export async function getServerSideProps() {
           }
         }
         animeMovies: Page(perPage: 3) {
-          media(format: MOVIE, seasonYear: ${currentYear}, averageScore_greater: 70, sort: SCORE_DESC) {
+          media(format: MOVIE, sort: SCORE_DESC) {
             id
             averageScore
             studios(isMain:true){
