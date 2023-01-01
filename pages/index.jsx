@@ -7,6 +7,11 @@ import TopAnime from '../components/Home/TopAnime';
 import MovieAnime from '../components/Home/MovieAnime';
 import TrendingAnime from '../components/Home/TrendingAnime';
 
+const currentSeason = ['WINTER', 'SPRING', 'SUMMER', 'FALL'][
+  getSeason(new Date())
+];
+const currentYear = new Date().getFullYear();
+
 export default function Home({
   seasonalAnimeData,
   topFiveAnimeData,
@@ -17,7 +22,7 @@ export default function Home({
     <div>
       <Hero />
       <div className='layout'>
-        {/* <SeasonalAnime seasonalAnimeData={seasonalAnimeData} /> */}
+        <SeasonalAnime seasonalAnimeData={seasonalAnimeData} />
         <TopAnime topFiveAnimeData={topFiveAnimeData} />
         <TrendingAnime trendingAnimeData={trendingAnimeData} />
         <MovieAnime animeMoviesData={animeMoviesData} />
@@ -27,11 +32,6 @@ export default function Home({
 }
 
 export async function getServerSideProps() {
-  const currentSeason = ['WINTER', 'SPRING', 'SUMMER', 'FALL'][
-    getSeason(new Date())
-  ];
-  const currentYear = new Date().getFullYear();
-
   const { data } = await client.query({
     query: gql`
       {
