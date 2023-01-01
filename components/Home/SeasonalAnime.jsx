@@ -9,24 +9,26 @@ const SeasonalAnime = ({ seasonalAnimeData }) => {
   return (
     <section>
       <SectionTitle title='Current Season' link='/anime/seasonal/?page=1' />
-      <HomeSeasonCardPrimary
-        key={primaryAnime?.id}
-        id={primaryAnime?.id}
-        image={primaryAnime?.bannerImage}
-        alt={
-          primaryAnime.title.english
-            ? primaryAnime.title.english
-            : primaryAnime.title.romaji
-        }
-        title={
-          primaryAnime.title.english
-            ? primaryAnime.title.english
-            : primaryAnime.title.romaji
-        }
-        studio={primaryAnime.studios.nodes[0].name}
-        averageScore={primaryAnime.averageScore}
-        description={markdownToTxt(primaryAnime.description)}
-      />
+      {primaryAnime && (
+        <HomeSeasonCardPrimary
+          key={primaryAnime?.id}
+          id={primaryAnime?.id}
+          image={primaryAnime?.bannerImage}
+          alt={
+            primaryAnime.title.english
+              ? primaryAnime.title.english
+              : primaryAnime.title.romaji
+          }
+          title={
+            primaryAnime.title.english
+              ? primaryAnime.title.english
+              : primaryAnime.title.romaji
+          }
+          studio={primaryAnime.studios.nodes[0].name}
+          averageScore={primaryAnime.averageScore}
+          description={markdownToTxt(primaryAnime.description)}
+        />
+      )}
 
       <div className='mt-8 grid grid-cols-1 gap-3 md:grid-cols-2'>
         {secondaryAnime.map((anime) => (
