@@ -40,7 +40,6 @@ export async function getServerSideProps() {
             format: TV
             season: ${currentSeason}
             seasonYear: ${currentYear}
-            averageScore_greater: 76
             sort: SCORE_DESC
           ) {
             id

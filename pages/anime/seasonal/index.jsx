@@ -24,16 +24,18 @@ const Seasonal = ({ seasonalAllData, pageData }) => {
             id={anime.id}
             genres={anime.genres}
             key={anime.id}
-            image={anime.coverImage.extraLarge}
-            alt={anime.title.english}
-            title={anime.title.english}
-            studios={anime.studios.nodes[0].name}
+            image={anime?.coverImage.extraLarge}
+            alt={anime.title.english ? anime.title.english : anime.title.romaji}
+            title={
+              anime.title.english ? anime.title.english : anime.title.romaji
+            }
+            studios={anime.studios.nodes[0]?.name}
             description={markdownToTxt(anime.description)}
-            format={anime.format}
+            format={anime?.format}
             episodes={anime?.episodes}
             season={anime.season}
             seasonYear={anime.seasonYear}
-            averageScore={anime.averageScore}
+            averageScore={anime?.averageScore}
           />
         ))}
       </div>
@@ -68,6 +70,7 @@ export async function getServerSideProps(context) {
             genres
             title {
               english
+              romaji
             }
             studios(sort: NAME, isMain: true) {
               nodes {

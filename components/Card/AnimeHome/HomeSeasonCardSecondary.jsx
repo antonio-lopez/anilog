@@ -35,7 +35,7 @@ const HomeSeasonCardSecondary = ({
           <h1 className='hover:text-mediumSlateBlue'>{title}</h1>
         </Link>
         <span className='text-xs text-white/60'>{studio}</span>
-        <Rating averageScore={averageScore} />
+        {averageScore ? <Rating averageScore={averageScore} /> : ''}
         <p className='hidden lg:block'>{shorten(description, 250)}...</p>
         <p className='text-xs lg:hidden'>{shorten(description, 170)}...</p>
       </div>

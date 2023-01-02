@@ -12,21 +12,21 @@ const Trending = ({ trendAllData, pageData }) => {
       <div className='grid grid-cols-1 gap-5 md:grid-cols-2'>
         {trendAllData.map((anime) => (
           <AnimeViewAllCard
-            id={anime.id}
-            genres={anime.genres}
-            key={anime.id}
-            image={anime.coverImage.extraLarge}
+            id={anime?.id}
+            genres={anime?.genres}
+            key={anime?.id}
+            image={anime?.coverImage.extraLarge}
             alt={anime.title.english ? anime.title.english : anime.title.romaji}
             title={
               anime.title.english ? anime.title.english : anime.title.romaji
             }
             studios={anime.studios.nodes[0]?.name}
             description={markdownToTxt(anime.description)}
-            format={anime.format}
+            format={anime?.format}
             episodes={anime?.episodes}
             season={anime?.season}
             seasonYear={anime?.seasonYear}
-            averageScore={anime.averageScore}
+            averageScore={anime?.averageScore}
           />
         ))}
       </div>

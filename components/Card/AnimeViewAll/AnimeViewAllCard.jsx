@@ -61,7 +61,7 @@ const AnimeViewAllCard = ({
               {season ? formatString(season) : ''} {seasonYear}
             </span>
           </div>
-          <Rating averageScore={averageScore} />
+          {averageScore ? <Rating averageScore={averageScore} /> : ''}
         </div>
         <div className='justify-self-end'>
           <GenrePill genres={genres} />

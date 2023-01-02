@@ -38,7 +38,7 @@ const HomeSeasonCardPrimary = ({
           </h1>
         </Link>
         <span className='text-sm text-white/60'>{studio}</span>
-        <Rating averageScore={averageScore} />
+        {averageScore ? <Rating averageScore={averageScore} /> : ''}
         <p className='text-sm md:text-base'>{shorten(description, 550)}...</p>
       </div>
     </div>
