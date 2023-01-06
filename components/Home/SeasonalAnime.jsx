@@ -12,7 +12,11 @@ const SeasonalAnime = ({ seasonalAnimeData }) => {
       <HomeSeasonCardPrimary
         key={primaryAnime?.id}
         id={primaryAnime?.id}
-        image={primaryAnime?.bannerImage}
+        image={
+          primaryAnime?.bannerImage
+            ? primaryAnime?.bannerImage
+            : primaryAnime?.coverImage?.extraLarge
+        }
         alt={
           primaryAnime.title.english
             ? primaryAnime.title.english
