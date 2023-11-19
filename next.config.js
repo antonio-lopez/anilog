@@ -4,6 +4,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['s4.anilist.co'],
+    unoptimized: true,
   },
 };
 
