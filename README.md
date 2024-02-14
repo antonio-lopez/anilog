@@ -19,6 +19,8 @@
 
 An anime and manga tracker using the [Anilist GraphQL API](https://github.com/AniList/ApiV2-GraphQL-Docs) for static and dynamic queries. First time using GraphQL and the Apollo client to consume an API in NextJS. Queries are executed on the server to pre-render pages using NextJS `getServerSideProps`. Dynamic queries are executed on the client side when searching for an anime or manga.
 
+> To delve deeper into my development process, feel free to visit my website for a [comprehensive explanation](https://www.antoniolopez.me/projects/anilog).
+
 ### Highlights
 
 - GraphQL API calls and interactions
