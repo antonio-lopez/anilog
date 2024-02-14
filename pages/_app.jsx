@@ -19,11 +19,11 @@ function MyApp({ Component, pageProps }) {
             "Track. Browse. Discover. Track what you watch. Browse the season's hottest anime. Discover new anime",
           images: [
             {
-              url: 'https://raw.githubusercontent.com/antonio-lopez/anilog/main/public/images/anilog-seo-cover.jpg',
-              width: 800,
-              height: 600,
+              url: 'https://res.cloudinary.com/dloisor1x/image/upload/v1707934025/portfolio/anilog/og-anilog_qiwrms.png',
+              width: 1200,
+              height: 630,
               alt: 'Anilog Home Page',
-              type: 'image/jpg',
+              type: 'image/png',
             },
           ],
         }}
